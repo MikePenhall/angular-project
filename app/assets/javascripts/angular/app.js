@@ -1,0 +1,1 @@
+var AngularForm = angular.module('AngularForm', ['ngResource']);
