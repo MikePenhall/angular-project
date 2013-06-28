@@ -3,6 +3,7 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions.json
   def index 
+    @submission = Submission.new
   end
 
   def all_submissions

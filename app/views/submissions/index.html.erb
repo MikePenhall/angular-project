@@ -1,11 +1,55 @@
 <h1>Listing submissions</h1>
 
   <div ng-controller="SubmissionsCtrl">
-    <div ng-repeat"submission in submissions">
+
+    <div ng-repeat="submission in submissions">
       {{submission}}
     </div>
+
+    <div class="form">
+       
+        <form novalidate class="css-form">       
+          
+          <div class="control-group">
+            <%= label_tag 'name', 'Name', :class => 'control-label' %>
+            <%= text_field_tag 'name', '', :class => 'controls', :"ng-model" => "submission.name" %>
+          </div>
+
+          <div class="control-group">
+            <%= label_tag 'job_number', 'Job number', :class => 'control-label' %>
+            <%= text_field_tag 'job_number', '', :class => 'controls', :"ng-model" => "submission.job_number" %>
+          </div>
+
+          <div class="control-group">
+            <%= label_tag 'description', 'Description', :class => 'control-label' %>
+            <%= text_area_tag 'description', '', :class => 'controls', :"ng-model" => "submission.description" %>
+          </div>
+
+          <div class="control-group">
+            <%= label_tag 'age', 'Age', :class => 'control-label' %>
+            <%= number_field_tag 'age', '', :class => 'controls', :"ng-model" => "submission.age" %>
+          </div>
+
+          <div class="control-group">
+            <%= label_tag 'address', 'Address', :class => 'control-label' %>
+            <%= text_area_tag 'address', '', :class => 'controls', :"ng-model" => "submission.address" %>
+          </div>
+
+          <div class="control-group">
+            <%= label_tag 'occupation', 'Occupation', :class => 'control-label' %>
+            <%= text_field_tag 'occupation', '', :class => 'controls', :"ng-model" => "submission.occupation" %>
+          </div>
+
+          <div class="actions form-actions">
+            <input class="btn btn-primary" name="commit" type="submit" value="Submit" ng-click="create(submission)">
+            <a class="btn" href="/submissions">Back</a>
+          </div>
+ 
+      </form>
+    </div> 
+
   </div>
 
 <br>
 
-<%= link_to 'New Submission', new_submission_path %>
+<%= link_to 'New Submission' %>

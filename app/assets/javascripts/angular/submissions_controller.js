@@ -1,6 +1,8 @@
 AngularForm.controller('SubmissionsCtrl', ['$scope', 'SubmissionsService', function ($scope, SubmissionsService) {
-    SubmissionsService.allSubmissions(function(data) {
-      $scope.submissions = data;
-    })
-    console.log($scope.submissions);
+    $scope.submissions = SubmissionsService.index();
+
+    $scope.create = function(submission) {
+      console.log(submission);
+      // SubmissionsService.update(submission);
+    };
 }]);
