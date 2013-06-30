@@ -1,1 +1,1 @@
-var AngularForm = angular.module('AngularForm', ['ngResource']);
+var AngularForm = angular.module('AngularForm', ['ngResource, templates']);
