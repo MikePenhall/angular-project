@@ -1,19 +1,14 @@
 <div class="control-group">
-  <%= f.label :job_number, :class => 'control-label' %>
-  <%= f.text_field :job_number, :class => 'controls' %>
+  <%= label_tag 'job_number', 'Job number', :class => 'control-label' %>
+  <%= text_field_tag 'job_number', '', :class => 'controls', :"ng-model" => "submission.job_number" %>
 </div>
 
 <div class="control-group">
-  <%= f.label :description, :class => 'control-label' %>
-  <%= f.text_area :description, :class => 'controls' %>
+  <%= label_tag 'description', 'Description', :class => 'control-label' %>
+  <%= text_area_tag 'description', '', :class => 'controls', :"ng-model" => "submission.description" %>
 </div>
 
 <div class="control-group">
-  <%= f.label :occupation, :class => 'control-label' %>
-  <%= f.text_field :occupation, :class => 'controls' %>
-</div>
-
-<div class="actions form-actions">
-  <%= f.submit "Submit", :class => 'btn btn-primary' %>
-  <%= link_to 'Back', submissions_path, :class => 'btn' %>
+  <%= label_tag 'occupation', 'Occupation', :class => 'control-label' %>
+  <%= text_field_tag 'occupation', '', :class => 'controls', :"ng-model" => "submission.occupation" %>
 </div>
