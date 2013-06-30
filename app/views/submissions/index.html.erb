@@ -6,18 +6,12 @@
       {{submission}}
     </div>
 
-    <div class="form">
-       
-        <form novalidate class="form-horizontal">
-
-          <div class="actions form-actions">
-            <input class="btn btn-primary" name="commit" type="submit" value="Submit" ng-click="create(submission)">
-            <a class="btn" href="/submissions">Back</a>
-          </div>
- 
-      </form>
-    </div> 
-
+    <form novalidate class="form-horizontal">
+      <div class="actions form-actions">
+        <a class="btn" href="" ng-click="go('/step_one')">Step One</a>
+        <a class="btn" href="" ng-click="go('/step_two')">Step Two</a>
+      </div>
+    </form>
   </div>
 
 <br>

@@ -1,4 +1,4 @@
-AngularForm.controller('SubmissionsCtrl', ['$scope', 'SubmissionsService', function ($scope, SubmissionsService) {
+AngularForm.controller('SubmissionsCtrl', ['$scope', '$location', 'SubmissionsService', function ($scope, $location, SubmissionsService) {
     $scope.submissions = []
 
     // Get all submissions from SubmissionsService
@@ -12,6 +12,10 @@ AngularForm.controller('SubmissionsCtrl', ['$scope', 'SubmissionsService', funct
       SubmissionsService.create(submission, function(response) {
         $scope.submissions.push(response);
       });
+    };
+
+    $scope.go = function(path) {
+      $location.path(path);
     };
 
 }]);

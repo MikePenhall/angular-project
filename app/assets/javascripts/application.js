@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require angular
 //= require angular-resource
+//= require ./angular/templates
 //= require ./angular/app
 //= require ./angular/services
 //= require ./angular/submissions_controller
