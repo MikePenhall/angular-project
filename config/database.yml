@@ -1,3 +1,4 @@
 development:
   adapter: postgresql
-  database: angular_project
+  database: angular_demo
+  user: james

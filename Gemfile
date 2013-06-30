@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # Backend
-gem 'rails'
+gem 'rails', '~> 4.0.0'
 gem 'pg'
 
 #Frontend

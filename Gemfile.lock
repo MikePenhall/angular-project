@@ -104,5 +104,5 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   pg
-  rails
+  rails (~> 4.0.0)
   twitter-bootstrap-rails
