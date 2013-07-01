@@ -1,5 +1,7 @@
-AngularForm.controller('SubmissionsCtrl', ['$scope', '$location', 'SubmissionsService', function ($scope, $location, SubmissionsService) {
-    $scope.submissions = []
+AngularForm.controller('SubmissionsCtrl', ['$scope', '$location', '$rootScope', 'SubmissionsService', 
+  function ($scope, $location, $rootScope, SubmissionsService) {
+    $scope.submissions = [];
+    $scope.submission = $rootScope.submission;
 
     // Get all submissions from SubmissionsService
     SubmissionsService.index(function (response){
@@ -8,14 +10,20 @@ AngularForm.controller('SubmissionsCtrl', ['$scope', '$location', 'SubmissionsSe
       $scope.err = "Error retrieving submissions"
     });
 
+    $scope.updateSubmission = function(submission) {
+      $scope.submission = submission;
+    };
+
+    $scope.go = function(path) {
+      $rootScope.submission = $scope.submission;
+      $location.path(path);
+    };
+
     $scope.create = function(submission) {
       SubmissionsService.create(submission, function(response) {
         $scope.submissions.push(response);
       });
-    };
-
-    $scope.go = function(path) {
-      $location.path(path);
+      $location.path('/index'); 
     };
 
 }]);

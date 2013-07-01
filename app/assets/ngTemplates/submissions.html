@@ -1,6 +1,25 @@
-<div ng-repeat="submission in submissions">
-  {{submission}}
-</div>
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Occupation</th>
+    <th>Job #</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="submission in submissions[0]">
+      <td>{{submission.id}}</td>
+      <td>{{submission.name}}</td>
+      <td>{{submission.age}}</td>
+      <td>{{submission.address}}</td>
+      <td>{{submission.occupation}}</td>
+      <td>{{submission.job_number}}</td>
+      <td>{{submission.description}}</td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="actions form-actions">
   <a class="btn" href="" ng-click="go('/step_one')">Step One</a>

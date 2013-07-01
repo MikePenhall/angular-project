@@ -8,17 +8,17 @@
 
 <div class="control-group">
   <label class="control-label" for="name">Name</label>
-  <input class="controls" id="name" name="name" ng-model="submission.name" type="text" value="" />
+  <input class="controls" id="name" name="name" ng-model="submission.name" ng-change="updateSubmission(submission)" type="text" value="" />
 </div>
 
 <div class="control-group">
   <label class="control-label" for="age">Age</label>
-  <input class="controls" id="age" name="age" ng-model="submission.age" type="number" value="" />
+  <input class="controls" id="age" name="age" ng-model="submission.age" ng-change="updateSubmission(submission)" type="number" value="" />
 </div>
 
 <div class="control-group">
   <label class="control-label" for="address">Address</label>
-  <textarea class="controls" id="address" name="address" ng-model="submission.address"></textarea>
+  <textarea class="controls" id="address" name="address" ng-change="updateSubmission(submission)" ng-model="submission.address" />
 </div>
 
 <div class="actions form-actions">
