@@ -2,4 +2,4 @@ angular.module('templates', []).run(function($templateCache) {
   <% Dir.glob(Rails.root.join('app','assets','ngTemplates', '*.html')).each do |f| %>
     $templateCache.put("<%= File.basename(f) %>", <%= File.read(f).to_json %>);
   <% end %>
-});
+});//1234
