@@ -1,3 +1,11 @@
+<p>Name: {{submission.name}}</p>
+<p>Age: {{submission.age}}</p>
+<p>Address: {{submission.address}}</p>
+<p>Occupation: {{submission.occupation}}</p>
+<p>Job Number: {{submission.job_number}}</p>
+<p>Description: {{submission.description}}</p>
+
+
 <div class="control-group">
   <label class="control-label" for="name">Name</label>
   <input class="controls" id="name" name="name" ng-model="submission.name" type="text" value="" />
@@ -10,8 +18,7 @@
 
 <div class="control-group">
   <label class="control-label" for="address">Address</label>
-  <textarea class="controls" id="address" name="address" ng-model="submission.address">
-  </textarea>
+  <textarea class="controls" id="address" name="address" ng-model="submission.address"></textarea>
 </div>
 
 <div class="actions form-actions">

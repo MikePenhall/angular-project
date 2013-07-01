@@ -1,17 +1,24 @@
+<p>Name: {{submission.name}}</p>
+<p>Age: {{submission.age}}</p>
+<p>Address: {{submission.address}}</p>
+<p>Occupation: {{submission.occupation}}</p>
+<p>Job Number: {{submission.job_number}}</p>
+<p>Description: {{submission.description}}</p>
+
 <div class="control-group">
   <label class="control-label" for="job_number">Job number</label>
-  <input class="controls" id="job_number" name="job_number" ng-model="submission.job_number" type="text" value="" />
+  <input class="controls" id="job_number" name="job_number" ng-model="submission.job_number" ng-change="updateSubmission(submission)" type="text" value="" />
 </div>
 
 <div class="control-group">
   <label class="control-label" for="description">Description</label>
-  <textarea class="controls" id="description" name="description" ng-model="submission.description">
+  <textarea class="controls" id="description" name="description" ng-model="submission.description" ng-change="updateSubmission(submission)">
 </textarea>
 </div>
 
 <div class="control-group">
   <label class="control-label" for="occupation">Occupation</label>
-  <input class="controls" id="occupation" name="occupation" ng-model="submission.occupation" type="text" value="" />
+  <input class="controls" id="occupation" name="occupation" ng-model="submission.occupation" ng-change="updateSubmission(submission)" type="text" value="" />
 </div>
 
 <div class="actions form-actions">
